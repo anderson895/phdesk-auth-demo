@@ -1,0 +1,14 @@
+{
+  "name": "phdesk-auth-demo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "db:init": "wrangler d1 execute auth-demo-db --local --file=./schema.sql",
+    "dev": "wrangler dev",
+    "users": "wrangler d1 execute auth-demo-db --local --command \"SELECT * FROM users\"",
+    "sessions": "wrangler d1 execute auth-demo-db --local --command \"SELECT * FROM sessions\""
+  },
+  "devDependencies": {
+    "wrangler": "^4"
+  }
+}
